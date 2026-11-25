@@ -1,0 +1,35 @@
+# Secrets
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+db.sqlite3
+
+# User-uploaded scan photos (runtime data)
+backend/plant_recognition/uploads/*
+!backend/plant_recognition/uploads/.gitkeep
+
+# Flutter build output
+frontend/build/
+frontend/.dart_tool/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+
+# Node
+node_modules/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+
+# Firebase config (contains API keys) - generate your own with `flutterfire configure`
+frontend/lib/firebase_options.dart
+frontend/android/app/google-services.json
+frontend/ios/Runner/GoogleService-Info.plist
+frontend/macos/Runner/GoogleService-Info.plist
