@@ -59,10 +59,10 @@ class _GeoCampusMapScreenState extends State<GeoCampusMapScreen>
       if (!mounted) return;
       await context.read<PlantMapProvider>().load();
       if (!mounted) return;
-      await _initGps();
-      if (mounted) {
-        setState(() => _isCalibrating = false);
-      }
+      // Show the map as soon as plant data is ready; GPS keeps resolving in
+      // the background (a cold fix can take a long time indoors).
+      setState(() => _isCalibrating = false);
+      _initGps();
     });
   }
 
@@ -95,14 +95,23 @@ class _GeoCampusMapScreenState extends State<GeoCampusMapScreen>
     }
 
     // Get initial fix
+    // Last known position first, so the avatar appears immediately.
+    try {
+      final last = await Geolocator.getLastKnownPosition();
+      if (last != null) _onPosition(last);
+    } catch (_) {}
+
     try {
       final pos = await Geolocator.getCurrentPosition(
         locationSettings: const LocationSettings(
           accuracy: LocationAccuracy.bestForNavigation,
+          timeLimit: Duration(seconds: 15),
         ),
       );
       _onPosition(pos);
-    } catch (_) {}
+    } catch (_) {
+      // Timed out: the position stream below will deliver the fix later.
+    }
 
     if (!mounted) return;
     // Stream updates

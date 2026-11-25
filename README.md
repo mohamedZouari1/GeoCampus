@@ -11,7 +11,52 @@ GeoCampus is a serious game for campus sustainability: a Flutter mobile app wher
 - **Campus Pokédex**: every species you discover, with confidence and your photo.
 - **Rewards**: XP and Eco Coins are synced to Firebase and show up on the leaderboard.
 - **Daily SDG quiz and streaks**: one quiz per day, plus a daily play streak.
-- **Mini-games**: Light Saver, Crush the Plastic, Guardian of the Forest.
+- **Mini-games**: Light Saver, Recycle Plastic, Guardian of the Forest.
+
+---
+
+## 📸 App tour
+
+<p align="center">
+  <img src="docs/screenshots/welcome.jpg" width="200" alt="Welcome screen">
+  <img src="docs/screenshots/session-start.jpg" width="200" alt="Session start">
+  <img src="docs/screenshots/hub.jpg" width="200" alt="Campus Hub">
+</p>
+
+**1. Sign up and start a session.** Create an account (name, username, email, campus), and the start screen shows your level and the health of each campus zone. Tap **Enter campus** to start playing.
+
+**2. Campus Hub.** Your home base: level, XP, Eco Coins and your daily streak (open the app every day to grow it), plus real-world data on deforestation.
+
+<p align="center">
+  <img src="docs/screenshots/map.jpg" width="200" alt="Campus map">
+  <img src="docs/screenshots/plant-info.jpg" width="200" alt="Plant info">
+  <img src="docs/screenshots/pokedex.jpg" width="200" alt="Pokédex">
+</p>
+
+**3. Live campus map.** You are the blue avatar, placed by GPS. Each 🌿 marker is a real plant on campus. When you walk within 50 m of one, it glows orange and the **SCAN** button lights up. Drag the map to look around, and tap ◎ to re-centre on yourself.
+
+**4. Plant details.** Tap any marker to see the species and its scientific name, then tap **Scan This Plant** to go and find it.
+
+**5. Pokédex.** Tap 📖 on the map. Every species you've identified gets a card with your photo and the AI confidence. Can you complete all 20?
+
+<p align="center">
+  <img src="docs/screenshots/scanner.jpg" width="200" alt="Plant scanner">
+  <img src="docs/screenshots/hub-games-quiz.jpg" width="200" alt="Minigames and quiz">
+  <img src="docs/screenshots/quiz.jpg" width="200" alt="Daily quiz">
+</p>
+
+**6. AI plant scanner.** Take a photo, or pick one from your gallery, and PlantNet identifies the plant. A new species earns **5× XP** and a big coin bonus, and rescans earn a little. Tap 🔑 (top right) to enter your own PlantNet key (see below).
+
+**7. Mini-games and the daily quiz.** Scroll down the Hub. **Play Minigames** opens the arcade, and the **Daily SDG Quiz** gives bonus XP once a day for every correct answer.
+
+<p align="center">
+  <img src="docs/screenshots/sdg-tasks.jpg" width="200" alt="SDG task hub">
+  <img src="docs/screenshots/minigame.jpg" width="200" alt="Recycle Plastic mini-game">
+</p>
+
+**8. Play tab: SDG missions.** Real-life challenges grouped by the 17 UN Sustainable Development Goals. Complete them to earn XP.
+
+**9. Mini-games.** Light Saver, Recycle Plastic and Guardian of the Forest: quick arcade games with an eco message. The **Ranks** tab shows the campus XP leaderboard.
 
 ---
 
